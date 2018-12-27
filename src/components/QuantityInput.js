@@ -6,13 +6,19 @@ export default class QuantityInput extends Component {
     value: 0,
   };
 
+  static getDerivedStateFromProps(props, _state) {
+    return {
+      value: props.value,
+    };
+  }
+
   updateValue = (change) => {
     this.setState(({value}) => {
       let newValue = value + change;
       if (newValue < 0) {
         newValue = 0;
       }
-
+      this.props.onChange(newValue);
       return {value: newValue};
     });
   };
