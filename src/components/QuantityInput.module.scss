@@ -1,0 +1,25 @@
+.QuantityInput {
+  border-radius: 4px;
+  height: 30px;
+  background: #f3f3f3;
+  display: inline-block;
+  input {
+    border: none;
+    text-align: center;
+    width: 30pt;
+    height: 30px;
+    display: inline-block;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    border-radius: 0;
+    padding: 4pt;
+    border: none;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}
